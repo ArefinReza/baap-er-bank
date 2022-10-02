@@ -10,10 +10,10 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
 
     
 
-    if(newWithdraw>presiousWithdraw){
-        alert('Baaap er bank a oto tk nai');
-        return;
-    }
+    // if(newWithdraw>presiousWithdraw){
+    //     alert('Baaap er bank a oto tk nai');
+    //     return;
+    // }
     const withdrowTotal = newWithdraw + presiousWithdraw;
 
     withdrowUpper.innerText = withdrowTotal;
