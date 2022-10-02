@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Document</title>
+</head>
+<body class="bg-emerald-300">
+    <header>
+        <h1 class="text-5xl text-center mt-6">Let's get some 
+            <span class="text-6xl text-center text-amber-400">Moooooney</span>!!!</h1> 
+    </header>
+    <main >
+        <section>
+            
+            <div class="grid grid-cols-3  mt-10">
+                <div class="bg-amber-500 p-10 text-center mx-auto w-9/12">
+                    <h2 class="text-3xl font-semibold">Deposit</h2>
+                    <h3  class="text-5xl font-semibold text-white">$<span id="deposit-total" >00</span> </h3>
+                </div>
+                <div class="bg-amber-600 p-10 text-center mx-auto w-9/12">
+                    <h2 class="text-3xl font-semibold">Withdro</h2>
+                    <h3  class="text-5xl font-semibold text-white">$<span id="withdro-total">00</span></h3>
+                </div>
+                <div class="bg-amber-500 p-10 text-center mx-auto w-9/12">
+                    <h2 class="text-3xl font-semibold">Balance</h2>
+                    <h3  class="text-5xl font-semibold text-white">$ <span id="balance-total">1200</span></h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            
+            <div class="grid grid-cols-2 gap-4 mt-12"> 
+
+                <!-- Deposit div  -->
+                <div class="bg-amber-200 p-10  mx-auto w-9/12">
+                    <h2 class="text-3xl font-semibold">Please Deposit</h2>
+                    <input id="deposit-input" class="block w-10/12 mt-5 mb-3 px-7" type="number">
+                    <button id="btn-deposit" class="bg-blue-600 hover:bg-amber-700 hover:text-white px-14 py-5 text-2xl font-semibold text-amber-400 rounded-lg"type="submit">Deposit</button>
+                </div>
+
+                <!-- Withdraw div  -->
+                <div class="bg-amber-200 p-10  mx-auto w-9/12">
+                    <h2 class="text-3xl font-semibold">Please Withdraw</h2>
+                    <input id="withdraw-input" class="block w-10/12 mt-5 mb-3 px-7" type="number">
+                    <button id="btn-withdraw" class="bg-blue-600 hover:bg-amber-700 hover:text-white px-14 py-5 text-2xl font-semibold text-amber-400 rounded-lg"type="submit">Withdraw</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="./bank.js"></script>
+    <script src="./withdraw.js"></script>
+</body>
+</html>
