@@ -4,6 +4,7 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
     const newDepositAmountString = depositField.value;
     const newDepositAmount = parseFloat(newDepositAmountString);//string convert to number
     //stap 3: get the current deposit
+
     const depositTotalElement =document.getElementById('deposit-total');
     const previousDepostiTotal = depositTotalElement.innerText;
     const previousDeposit = parseFloat(previousDepostiTotal);
@@ -14,23 +15,16 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
 
     //Balance added
     const balanceFild = document.getElementById('balance-total');
-    const balanceString = balanceFild.value;
+    const balanceString = balanceFild.innerText;
     const balanceAmount = parseFloat(balanceString);
 
-    const currentBalance = previousDeposit + newDepositAmount;
+    const currentBalance = newDepositAmount + balanceAmount;
     balanceFild.innerText=currentBalance;
 
     //stape 7 : clear the deposit fild
     depositField.value='';
 })
 
-//deposit
-// document.getElementById('btn-deposit').addEventListener('click',function(){
-//     let depositInput = parseFloat(document.getElementById('deposit-total').value);
-    
-//     const depositUpper = parseFloat(document.getElementById('deposit-total').innerText);
-
-//     let totalDeposit = depositInput+depositUpper;
-
-//     document.getElementById('deposit-total').innerText = totalDeposit;
-// })
+document.getElementById('btn-logout').addEventListener('click',function(){
+    window.location.href='index.html'
+})
